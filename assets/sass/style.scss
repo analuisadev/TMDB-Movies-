@@ -1,0 +1,141 @@
+$bg-color: #032A46;
+$color-link: #02B4E4;
+$box-shadow: #CBCBCB;
+$clear: #fff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+
+.header { 
+    width: 100%;
+    padding: 10px;
+    background-color: $bg-color;
+    & &__img {
+        width: 300px;
+    }
+    & &__menu {
+        float: right;
+    }
+    & &__menu ul {
+        list-style: none;
+    }
+
+    &__menu ul li {
+        display: inline-block;
+        margin: 10px;
+    }
+    & &__link {
+        color: $color-link;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+    & &__link:hover {
+        color: $clear;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 1em;
+    & &__card {
+        box-shadow: 0 0 10px $box-shadow;
+        margin: 10px;
+        text-align: center;
+        font-size: 1em;
+        color: $bg-color;
+    }
+    & &__img {
+        width: 100%;
+        
+    }
+
+    & &__about {
+        padding: 10px;
+    }
+}
+
+
+.footer {
+    background-color: $bg-color;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    color: $clear;
+    
+    & &__img {
+        width: 200px;
+    }
+}
+
+
+@media  (max-width: 912px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .grid {
+        width: 50%;
+        display: inline-block;
+        & &__card {
+            margin: 1.2em;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    body, html {
+        width: 100%;
+    }
+
+
+    .header {
+      display: inline-block;
+      & &__logo {
+        width: 100%;
+        text-align: center;
+        display: block;
+      }
+
+      & &__img {
+        width: 200px;
+      }
+
+      & &__menu {
+        width: 100%;
+        text-align: center;
+      }
+
+    }
+    
+    main {
+      width: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  
+    .grid {
+      width: 70%;
+      grid-template-columns: 100%;
+    }
+
+    .footer {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+  } 
